@@ -115,6 +115,7 @@ function runTimeout(fun) {
     // if setTimeout wasn't available but was latter defined
     if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
         cachedSetTimeout = setTimeout;
+	    
         return setTimeout(fun, 0);
     }
     try {
